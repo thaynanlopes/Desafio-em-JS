@@ -24,8 +24,10 @@
     <form id="new_review_form" >
     <label for="title">Título do Game</label>
     <input id="title" type="text">
+    <br>
     <label for="review">Review do Jogo</label>
     <textarea id="review"></textarea> 
+    <br>
     <label for="category">Categoria do Jogo</label>
             <select id="category" name="categoriajogo">
             <option value="">Escolha a categoria</option>
@@ -54,6 +56,11 @@
         
             /* 
             * Coloque AQUI sua lógica para capturar os dados do formulário
+            * Propositalmente nao inclui o atributo NAME nos inputs. Você precisará colocar
+            * Um atributo NAME em cada input para consegui recuperar eles
+            * Nessa parte do seu código.
+            * 
+            * Atencao para o input de type="radio". Eles devem ter todos o mesmo atributo NAME.
             */
 
         }
