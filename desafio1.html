@@ -21,7 +21,7 @@
 <body>
     <h1>Game Reviews</h1>
     <h2>Crie um novo review</h2>
-    <form>
+    <form id="new_review_form" >
     <label for="title">Título do Game</label>
     <input id="title" type="text">
     <label for="review">Review do Jogo</label>
@@ -43,11 +43,23 @@
     <input name="rating" type="radio" value="4">
     <input name="rating" type="radio" value="5">
     <br>
-    <button id="form_submit_btn" class="btn" type="submit">Salvar Review</button>
+    <button class="btn" type="submit">Salvar Review</button>
     </form>
     <script>
-        var salvar = document.querySelector("#form_submit_btn");
+        // 
+        const form = document.querySelector("#new_review_form");
+
+        function handleSubmit(submitEvent) {
+            e.preventDefault(); // Isso aqui é obrigatório se vc nao quer que sua página faça um refresh automatico quando submeter o formulario;
         
+            /* 
+            * Coloque AQUI sua lógica para capturar os dados do formulário
+            */
+
+        }
+
+        // A funcao handleSubmit irá rodar toda vez que houver um evento de submissao do formulario na página, ou seja, quando clicar no botao que submete o formulario.
+        form.addEventListener("submit", handleSubmit) 
 
     </script>
     
