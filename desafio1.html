@@ -21,31 +21,32 @@
 <body>
     <h1>Game Reviews</h1>
     <h2>Crie um novo review</h2>
-    <section>Título do Game</section>
-    <input type="text">
-    <section>Review do Jogo</section>
-    <textarea></textarea> 
     <form>
-        Categoria do Jogo
-            <select name="categoriajogo">
+    <label for="title">Título do Game</label>
+    <input id="title" type="text">
+    <label for="review">Review do Jogo</label>
+    <textarea id="review"></textarea> 
+    <label for="category">Categoria do Jogo</label>
+            <select id="category" name="categoriajogo">
             <option value="">Escolha a categoria</option>
             <option value="FPS">FPS</option>
             <option value="Indie">Indie</option>
             <option value="Estratégia">Estratégia</option>
             <option value="Lógica">Lógica</option>
         </select>
-           </form>
+        
     <br>         
-    <section>Nota do Review</section>
-    <input type="radio">
-    <input type="radio">
-    <input type="radio">
-    <input type="radio">
-    <input type="radio">
+    <label>Nota do Review</label>
+    <input name="rating" type="radio" value="1">
+    <input name="rating" type="radio" value="2">
+    <input name="rating" type="radio" value="3">
+    <input name="rating" type="radio" value="4">
+    <input name="rating" type="radio" value="5">
     <br>
-    <button class="btn" type="submit">Salvar Review</button>
+    <button id="form_submit_btn" class="btn" type="submit">Salvar Review</button>
+    </form>
     <script>
-        var salvar = document.querySelector
+        var salvar = document.querySelector("#form_submit_btn");
         
 
     </script>
