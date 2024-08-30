@@ -21,32 +21,52 @@
 <body>
     <h1>Game Reviews</h1>
     <h2>Crie um novo review</h2>
-    <section>Título do Game</section>
-    <input type="text">
-    <section>Review do Jogo</section>
-    <textarea></textarea> 
-    <form>
-        Categoria do Jogo
-            <select name="categoriajogo">
+    <form id="new_review_form" >
+    <label for="title">Título do Game</label>
+    <input id="title" type="text">
+    <br>
+    <label for="review">Review do Jogo</label>
+    <textarea id="review"></textarea> 
+    <br>
+    <label for="category">Categoria do Jogo</label>
+            <select id="category" name="categoriajogo">
             <option value="">Escolha a categoria</option>
             <option value="FPS">FPS</option>
             <option value="Indie">Indie</option>
             <option value="Estratégia">Estratégia</option>
             <option value="Lógica">Lógica</option>
         </select>
-           </form>
+        
     <br>         
-    <section>Nota do Review</section>
-    <input type="radio">
-    <input type="radio">
-    <input type="radio">
-    <input type="radio">
-    <input type="radio">
+    <label>Nota do Review</label>
+    <input name="rating" type="radio" value="1">
+    <input name="rating" type="radio" value="2">
+    <input name="rating" type="radio" value="3">
+    <input name="rating" type="radio" value="4">
+    <input name="rating" type="radio" value="5">
     <br>
     <button class="btn" type="submit">Salvar Review</button>
+    </form>
     <script>
-        var salvar = document.querySelector
+        // 
+        const form = document.querySelector("#new_review_form");
+
+        function handleSubmit(submitEvent) {
+            e.preventDefault(); // Isso aqui é obrigatório se vc nao quer que sua página faça um refresh automatico quando submeter o formulario;
         
+            /* 
+            * Coloque AQUI sua lógica para capturar os dados do formulário
+            * Propositalmente nao inclui o atributo NAME nos inputs. Você precisará colocar
+            * Um atributo NAME em cada input para consegui recuperar eles
+            * Nessa parte do seu código.
+            * 
+            * Atencao para o input de type="radio". Eles devem ter todos o mesmo atributo NAME.
+            */
+
+        }
+
+        // A funcao handleSubmit irá rodar toda vez que houver um evento de submissao do formulario na página, ou seja, quando clicar no botao que submete o formulario.
+        form.addEventListener("submit", handleSubmit) 
 
     </script>
     
