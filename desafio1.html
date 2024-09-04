@@ -4,32 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
-    <style>
-        *{
-            text-align: center;
-            background-color: rgb(152, 153, 153);
-            color: aliceblue;
-         }
-         .btn{
-            background-color: rgb(59, 100, 100);
-            padding: 15px;
-            margin: 20px;
-         }
-
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <h1>Game Reviews</h1>
     <h2>Crie um novo review</h2>
     <form id="new_review_form" >
     <label for="title">Título do Game</label>
-    <input id="title" type="text">
+    <input name="titulo" id="title" type="text">
     <br>
     <label for="review">Review do Jogo</label>
-    <textarea id="review"></textarea> 
+    <textarea name="revisao" id="review"></textarea> 
     <br>
     <label for="category">Categoria do Jogo</label>
-            <select id="category" name="categoriajogo">
+            <select id="category" name="categoria">
             <option value="">Escolha a categoria</option>
             <option value="FPS">FPS</option>
             <option value="Indie">Indie</option>
@@ -38,12 +26,12 @@
         </select>
         
     <br>         
-    <label>Nota do Review</label>
-    <input name="rating" type="radio" value="1">
-    <input name="rating" type="radio" value="2">
-    <input name="rating" type="radio" value="3">
-    <input name="rating" type="radio" value="4">
-    <input name="rating" type="radio" value="5">
+    <label for="rate">Nota do Review</label>
+    <input class="rate" name="rating" type="radio" value="1">
+    <input class="rate" name="rating" type="radio" value="2">
+    <input class="rate" name="rating" type="radio" value="3">
+    <input class="rate" name="rating" type="radio" value="4">
+    <input class="rate" name="rating" type="radio" value="5">
     <br>
     <button class="btn" type="submit">Salvar Review</button>
     </form>
@@ -54,6 +42,10 @@
         function handleSubmit(submitEvent) {
             e.preventDefault(); // Isso aqui é obrigatório se vc nao quer que sua página faça um refresh automatico quando submeter o formulario;
         
+            
+
+
+
             /* 
             * Coloque AQUI sua lógica para capturar os dados do formulário
             * Propositalmente nao inclui o atributo NAME nos inputs. Você precisará colocar
